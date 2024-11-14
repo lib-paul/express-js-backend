@@ -7,7 +7,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-// Registrar usuario
+// Ruta para registrar un nuevo usuario.
 router.post('/register', async (req, res) => {
   try {
     const { nombre, email, edad, password } = req.body;
@@ -20,7 +20,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Iniciar sesión
+// Ruta para el inicio de sesión.
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Obtener todos los usuarios (requiere autenticación)
+// Obtiene todos los usuarios (requiere autenticación) y los muestra en formato de JSON.
 router.get('/', authMiddleware, async (req, res) => {
   try {
     const users = await User.find();
@@ -47,7 +47,7 @@ router.get('/', authMiddleware, async (req, res) => {
   }
 });
 
-// Obtener un usuario por ID (requiere autenticación)
+// Obtiene un usuario especifico por ID (requiere autenticación).
 router.get('/:id', authMiddleware, async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -58,7 +58,7 @@ router.get('/:id', authMiddleware, async (req, res) => {
   }
 });
 
-// Actualizar un usuario por ID (requiere autenticación)
+// Actualiza un usuario por ID (requiere autenticación).
 router.put('/:id', authMiddleware, async (req, res) => {
   try {
     const { nombre, email, edad } = req.body;
@@ -70,7 +70,7 @@ router.put('/:id', authMiddleware, async (req, res) => {
   }
 });
 
-// Eliminar un usuario por ID (requiere autenticación)
+// Elimina un usuario por ID (requiere autenticación).
 router.delete('/:id', authMiddleware, async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);

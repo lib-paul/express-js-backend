@@ -1,0 +1,56 @@
+[
+  {
+    "email": "jane.smith@example.com",
+    "name": "Jane",
+    "lastname": "Smith",
+    "number": "0987654321"
+  },
+  {
+    "email": "alice.jones@example.com",
+    "name": "Alice",
+    "lastname": "Jones",
+    "number": "1122334455"
+  },
+  {
+    "email": "bob.brown@example.com",
+    "name": "Bob",
+    "lastname": "Brown",
+    "number": "5566778899"
+  },
+  {
+    "email": "charlie.davis@example.com",
+    "name": "Charlie",
+    "lastname": "Davis",
+    "number": "6677889900"
+  },
+  {
+    "email": "david.wilson@example.com",
+    "name": "David",
+    "lastname": "Wilson",
+    "number": "7788990011"
+  },
+  {
+    "email": "emily.moore@example.com",
+    "name": "Emily",
+    "lastname": "Moore",
+    "number": "8899001122"
+  },
+  {
+    "email": "frank.taylor@example.com",
+    "name": "Frank",
+    "lastname": "Taylor",
+    "number": "9900112233"
+  },
+  {
+    "email": "grace.anderson@example.com",
+    "name": "Grace",
+    "lastname": "Anderson",
+    "number": "1011121314"
+  },
+  {
+    "email": "henry.thomas@example.com",
+    "name": "Henry",
+    "lastname": "Thomas",
+    "number": "1213141516"
+  }
+]

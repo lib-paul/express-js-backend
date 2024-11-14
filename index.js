@@ -14,8 +14,14 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(() => console.log('Conectado a MongoDB'))
   .catch(err => console.error('No se pudo conectar a MongoDB', err));
 
-// Rutas
+// Rutas dinamicas
 app.use('/api/users', userRoutes);
+app.use('/api/tp', require('./routes/trabajopracticoRoutes'));
+
+// Ruta para saludar
+app.get('/', (req, res) => {
+  res.send('Hola, API funcionando correctamente');
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
